@@ -6,4 +6,7 @@ ze eenvoudig naar believen kunnen worden aangepast. Dit is een keuze, het kan va
 Dit Pythonscript is een voorbeeld hoe met verschillende invoersystemen een TIM berekening kan worden opgesteld.
 Ze is afgeleid van een bestaande situatie, met wijzigingen in de coordinaten. 
 
+Om dit script te laten runnen dienen alle onderdelen in dezelfde directory geplaatst te worden.
+Bij ontbrekende modules kunnen deze middels pip install worden geinstalleerd
+
 
