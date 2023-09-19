@@ -308,7 +308,7 @@ class GEF:
             punt = well['Naam'][rnum]
             x    = well['x'][rnum] 
             y    = well['y'][rnum]
-            punt = Well(ml, x,y,8800/19, rw=0.125, layers=well1)
+            punt = Well(ml, x,y, 8800/19, rw=0.125, layers=well1)
 
         ## Retourfilters
         vstf = -15
@@ -425,11 +425,10 @@ class GEF:
         """
         Hieronder worden de debieten berekend
         """
-    
-        qtot=int(punt.discharge().max())*nwells
-        qret=int(puntr.discharge().max())*nret
-        qdrz=int(drz.discharge().max())
-        qdrn=int(drn.discharge().max())
+        qtot=int(punt.discharge().sum())*nwells
+        qret=int(puntr.discharge().sum())*nret
+        qdrz=int(drz.discharge().sum())
+        qdrn=int(drn.discharge().sum())
 
         print('Bemalingsdebiet_1 dag ', qtot, ' [m3]')
         print('Retourdebiet_1 dag ', qret*1,  ' [m3]')
